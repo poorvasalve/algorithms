@@ -9,6 +9,7 @@ type suffix struct {
 }
 
 /*
+
 type Suffixes []suffix
 
 func (s Suffixes) Len() int {
