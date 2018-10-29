@@ -1,4 +1,4 @@
-package main
+package suffix_array
 
 import (  "fmt"		
 )
@@ -143,8 +143,8 @@ func radixSort (suffixes []suffix, n int, sortRank1 bool) []suffix {
 	return suffixes	
 }
 
-func buildSuffixArray (txt string, n int, ) []suffix {
-	
+func buildSuffixArray (txt string) []suffix {
+	n := len(txt)
 	suffixes := make([]suffix, n)
 	
 	// Build the Ranks according to alphabets in string
@@ -203,13 +203,4 @@ func buildSuffixArray (txt string, n int, ) []suffix {
 	}
 	
 	return suffixes
-}
-
-func main () {
-	
-	txt := "abbcbacba"
-	n 	:= len(txt)	
-	suffixes := buildSuffixArray( txt, n )	
-	fmt.Printf("%v", suffixes)	
-
 }
