@@ -1,4 +1,4 @@
-package suffix_array
+package suffixarray
 
 import (
 	"testing"
@@ -10,7 +10,7 @@ func TestSuffixArray(t *testing.T) {
 	expected := []suffix{
 		{
 			index:0,
-			rank:[2]int{1},
+			rank:[2]int{1:0},
 		},
 	}
 	assert.Equal(t, expected, actual)

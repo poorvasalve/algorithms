@@ -1,4 +1,4 @@
-package suffix_array
+package suffixarray
 
 import (  "fmt"		
 )
@@ -110,7 +110,7 @@ func radixSort (suffixes []suffix, n int, sortRank1 bool) []suffix {
 		}
 		fmt.Println("first rank max  = ", max)
 		fmt.Println("first rank sort : ")
-		fmt.Println(suffixes, "\n")
+		fmt.Println(suffixes)
 	}
 		
 	//Get max no. of second rank
@@ -129,13 +129,13 @@ func radixSort (suffixes []suffix, n int, sortRank1 bool) []suffix {
 				if startIndx < (i-1) { // to ensure there are atleast 2 entries to be sorted	
 					fmt.Println("exp = ", exp, " ; start index = ", startIndx, " ; end index = ", i)				
 					suffixes = countSort(suffixes, n, exp, 1, startIndx, i)					
-					fmt.Println(suffixes, "\n")	
+					fmt.Println(suffixes)
 				}						
 				startIndx = i		
 			} else if i == (n-1) && startIndx < i { //to ensure last entry is considered
 				fmt.Println("exp = ", exp, " ; start index = ", startIndx, " ; end index = ", i+1)
 				suffixes = countSort(suffixes, n, exp, 1, startIndx, i+1)
-				fmt.Println(suffixes, "\n")
+				fmt.Println(suffixes)
 			}
 		}		 
 	}
@@ -159,7 +159,7 @@ func buildSuffixArray (txt string) []suffix {
 	}
 	
 	fmt.Println("Ranks according to alphabets in string")
-	fmt.Println(suffixes, "\n")	
+	fmt.Println(suffixes)
 	
 	fmt.Println("Sort Ranks")
 	suffixes = radixSort(suffixes, n, true)
