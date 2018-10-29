@@ -186,7 +186,6 @@ func buildSuffixArray (txt string, n int, ) []suffix {
 			}			
 			ind[suffixes[i].index] = i
 		}
-		
 		//Build rank[1]	w.r.t rank[0] of (i + K/2) alphabet
 		for i:=0; i<n; i++ {
 			nxtindx := suffixes[i].index + (k/2) 
